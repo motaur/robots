@@ -1,0 +1,7 @@
+<ul class="robots">
+  <li *ngFor="let robot of robots">
+    <a routerLink="/details/{{robot.id}}">
+      <span class="badge">{{robot.id}}</span> {{robot.name}}
+    </a>
+  </li>
+</ul>
