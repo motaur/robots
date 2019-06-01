@@ -12,4 +12,5 @@ export class Robot
     activeV3: boolean;
     activeV4: boolean;
     comments: string;
+    isRunning: boolean
 }

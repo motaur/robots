@@ -11,6 +11,7 @@ import { RobotsListComponent } from './components/RobotsList/RobotsList.componen
 import { RobotComponent } from './components/Robot/Robot.component';
 import { RobotDetailsComponent }  from './components/RobotDetails/RobotDetails.component';
 import { SearchPipe } from './search.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,7 +27,8 @@ import { SearchPipe } from './search.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [RobotService],
   bootstrap: [AppComponent]

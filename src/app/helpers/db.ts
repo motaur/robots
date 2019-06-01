@@ -16,6 +16,7 @@ export const ROBOTS: Robot[] = [
     activeV3: false,
     activeV4: true,
     comments: "none",
+    isRunning: true
    
   },
   { 
@@ -30,7 +31,8 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
    
   },
   { 
@@ -45,12 +47,13 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
    
   },
   { 
     id: 1,
-    name: "bet365.prematch",
+    name: "bet365.inplay",
     type: "prematch",
     architecture: "newInfra",
     sportCoverage: "all",
@@ -60,12 +63,13 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
     
   },
   { 
     id: 2,
-    name: "betway.prematch",
+    name: "betway.Appender",
     type: "prematch",
     architecture: "newInfra",
     sportCoverage: "all",
@@ -75,7 +79,8 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
    
   },
   { 
@@ -90,51 +95,8 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
-    
-  },
-  { 
-    id: 1,
-    name: "bet365.prematch",
-    type: "prematch",
-    architecture: "newInfra",
-    sportCoverage: "all",
-    developer: "Hodaya",
-    productNotes: "string",
-    devNotes: "don't restart",
-    newInfrastatus: "runing in NewInfra",
-    activeV3: false,
-    activeV4: true,
-    comments: "none"
-  },
-  { 
-    id: 2,
-    name: "betway.prematch",
-    type: "prematch",
-    architecture: "newInfra",
-    sportCoverage: "all",
-    developer: "Nizan Rosh",
-    productNotes: "string",
-    devNotes: "restart anytime",
-    newInfrastatus: "runing in NewInfra",
-    activeV3: false,
-    activeV4: true,
-    comments: "none"
-    
-  },
-  { 
-    id: 3,
-    name: "Bwin.prematch",
-    type: "prematch",
-    architecture: "newInfra",
-    sportCoverage: "all",
-    developer: "Oz Avraham",
-    productNotes: "string",
-    devNotes: "restart anytime",
-    newInfrastatus: "runing in NewInfra",
-    activeV3: false,
-    activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
     
   },
   { 
@@ -149,8 +111,8 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
-    
+    comments: "none",
+    isRunning: true
   },
   { 
     id: 2,
@@ -164,7 +126,8 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
     
   },
   { 
@@ -179,7 +142,56 @@ export const ROBOTS: Robot[] = [
     newInfrastatus: "runing in NewInfra",
     activeV3: false,
     activeV4: true,
-    comments: "none"
+    comments: "none",
+    isRunning: true
+    
+  },
+  { 
+    id: 1,
+    name: "bet365.prematch",
+    type: "prematch",
+    architecture: "newInfra",
+    sportCoverage: "all",
+    developer: "Hodaya",
+    productNotes: "string",
+    devNotes: "don't restart",
+    newInfrastatus: "runing in NewInfra",
+    activeV3: false,
+    activeV4: true,
+    comments: "none",
+    isRunning: true
+    
+  },
+  { 
+    id: 2,
+    name: "Pinncale.prematch",
+    type: "prematch",
+    architecture: "newInfra",
+    sportCoverage: "all",
+    developer: "Nizan Rosh",
+    productNotes: "string",
+    devNotes: "restart anytime",
+    newInfrastatus: "runing in NewInfra",
+    activeV3: false,
+    activeV4: true,
+    comments: "none",
+    isRunning: false
+    
+  },
+  { 
+    id: 3,
+    name: "CoralBet.prematch",
+    type: "prematch",
+    architecture: "newInfra",
+    sportCoverage: "all",
+    developer: "Oz Avraham",
+    productNotes: "string",
+    devNotes: "restart anytime",
+    newInfrastatus: "runing in NewInfra",
+    activeV3: false,
+    activeV4: true,
+    comments: "none",
+    isRunning: true
     
   } 
 ];
