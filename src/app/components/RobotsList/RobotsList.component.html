@@ -1,7 +1,41 @@
-<ul class="robots">
-  <li *ngFor="let robot of robots">
-    <a routerLink="/details/{{robot.id}}">
-      <span class="badge">{{robot.id}}</span> {{robot.name}}
-    </a>
-  </li>
-</ul>
+<!---div class="row">
+  <div  *ngFor="let robot of robots">   
+      <div class="col s12 m3">
+          <div class="card small green">
+              <div class="card-content">
+                <p>{{robot.name}}</p>
+              </div>            
+          </div>
+      </div>
+  </div> 
+</div-->
+
+<div class="container"> 
+  <br>
+  <div class="row">
+      <div class="col s6" id="date">Last Update: {{date}}</div>
+      <div class="input-field col s3">        
+          <input #box (keyup.enter)="onEnter(box.value)">
+        <label class="active" for="name">Search:</label>
+      </div>
+  </div>
+    
+  <table>  
+    <thead>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col}}
+          </th>
+        </tr>
+    </thead>
+      
+    <tbody >
+        <tr *ngFor="let r of robots" >
+          <td *ngFor="let col of columns">               
+            {{ r [col] }}
+          </td>
+        </tr>
+    </tbody>  
+  </table>
+  
+</div>

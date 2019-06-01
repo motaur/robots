@@ -18,6 +18,12 @@ export class RobotService
     return of(ROBOTS);
   }
 
+  getColumns() : string[]
+  {
+    return ['id', 'name', 'type', 'architecture', 'sportCoverage', 'devNotes', 'developer', 'activeV3', 'activeV4'];
+  }
+
+
 constructor() { }
 
 }

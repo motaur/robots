@@ -10,11 +10,13 @@ import { AppRoutingModule } from './app-routing.module'
 import { RobotsListComponent } from './components/RobotsList/RobotsList.component'
 import { RobotComponent } from './components/Robot/Robot.component';
 import { RobotDetailsComponent }  from './components/RobotDetails/RobotDetails.component';
+import { SearchPipe } from './search.pipe';
 
 
 
 @NgModule({
   declarations: [
+    SearchPipe,
     AppComponent,
     RobotsListComponent,
     RobotComponent,
