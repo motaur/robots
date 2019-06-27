@@ -1,63 +1,14 @@
-<!---div class="row">
-  <div  *ngFor="let robot of robots">   
-      <div class="col s12 m3">
-          <div class="card small green">
-              <div class="card-content">
-                <p>{{robot.name}}</p>
-              </div>            
-          </div>
-      </div>
-  </div> 
-</div-->
-
-<div class="container"> 
+<div class="container">
   <br>
   <div class="row">
-      <div class="col s4" id="date">Last Update: {{date}}</div>
-
-      <div class="input-field col s4">        
-          <input #box (keyup.enter)="onEnter(box.value)">
-        <label class="active" for="name">Filter by Name:</label>
-      </div>
-
-      <div class="col s4">        
-        <a class="waves-effect waves-light btn-small green darken-1"><i class="material-icons ">play_arrow</i></a>
-        <a class="waves-effect waves-light btn-small red accent-4"><i class="material-icons ">stop</i></a>
-        <a class="waves-effect waves-light btn-small blue darken-1"><i class="material-icons ">replay</i></a>
-      </div>
-
+    <div class="input-field col s3">
+      <input id="name"  class="validate" [(ngModel)]="searchStr">
+      <label class="active" for="name">search by name</label>
+    </div>
   </div>
-    
-  <table class="striped">  
-    <thead>
-        <tr>
-          <th>pick</th>
-          <th *ngFor="let col of columns">
-            {{col}} 
-          </th>
-          <th>Running</th>                     
-        </tr>
-    </thead>
-      
-    <tbody >
-        
-        <tr *ngFor="let r of robots" >
-            <td>
-                <label>
-                  <input type="checkbox" />
-                  <span></span>
-                </label>
-              </td>
-          <td *ngFor="let col of columns">               
-            {{ r [col] }}       
-          </td>
-          <td>
-            <div *ngIf="r.isRunning; then thenBlock else elseBlock"></div> 
-            <ng-template #thenBlock><div class="btn-floating pulse green"><i class="material-icons">arrow_forward</i></div></ng-template>
-            <ng-template #elseBlock><div class="btn-floating red"><i class="material-icons">arrow_downward</i></div></ng-template>           
-          </td>
-        </tr>
-    </tbody>  
-  </table>
-  
 </div>
+  <div class="row">
+    
+      <app-RobotDetails *ngFor="let r of robotService.robots | search: searchStr" [r] = "r"></app-RobotDetails> 
+         
+  </div>

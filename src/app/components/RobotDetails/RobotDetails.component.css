@@ -1,0 +1,16 @@
+#body
+{
+    display: none;
+}
+
+#head:hover+#body
+{
+    display: block;
+    
+}
+.card-panel:hover
+{
+    width: 15.1%;
+    position: absolute;
+    z-index: 100;
+}

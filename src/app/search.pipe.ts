@@ -5,7 +5,7 @@ import { Pipe, PipeTransform, } from "@angular/core";
 })
 export class SearchPipe implements PipeTransform
 {
-    transform(robots, value) //get array of products and value for search
+    transform(robots, value) //get array of robots and value for search
     {        
         return robots.filter(robot => 
         {

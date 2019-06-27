@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 import { Robot } from '../../models/Robot.model'
 import {RobotService } from '../../Services/Robot.service'
@@ -10,28 +8,37 @@ import {RobotService } from '../../Services/Robot.service'
   templateUrl: './RobotDetails.component.html',
   styleUrls: ['./RobotDetails.component.css']
 })
-export class RobotDetailsComponent implements OnInit {
-  robot: Robot;
+export class RobotDetailsComponent
+{
+  @Input() r: Robot; 
 
-  constructor(private route: ActivatedRoute,
-              private robotService: RobotService,
-              private location: Location
-              ) { }
+  constructor(private robotService: RobotService)   { } 
 
-  ngOnInit(): void {
-    this.getRobot();
-  }
+  tuggle()
+  { 
+    var employee = ""
+    var reason = ""
 
-  getRobot(): void 
-  {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.robotService.getRobot(id)
-      .subscribe(robot => this.robot = robot);
-  }
+    while(employee === "" ||  reason === "")
+    {
+       employee = prompt("Please enter your name:", "");
+       reason = prompt("Please enter reason:", "");
+    }
 
-  goBack(): void {
-    this.location.back();
+    if(employee !== "" &&  reason !== "")
+    {  
+
+      this.r.updatedBy = employee
+      this.r.updateReason = reason            
+
+      this.robotService.onChange(this.r)
+
+      console.log(this.r.name + " now: " + this.r.isRunning) 
+        
+      
+    }    
+    
+  
   }
   
-
 }

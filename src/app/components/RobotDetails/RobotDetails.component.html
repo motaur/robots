@@ -1,10 +1,25 @@
-<div *ngIf="robot">
-  <h2>{{robot.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{robot.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="robot.name" placeholder="name"/>
-    </label>
+
+  
+    
+    <div class="col s2">
+      <div class="card-panel grey-light small">
+        <div (click)="tuggle()" class="center">                      
+            <div *ngIf="r.isRunning; else elseBlock"><button class="waves-effect waves-light btn-floating btn-small green"></button></div>                      
+            <ng-template #elseBlock><button class="waves-effect waves-light btn-floating btn-small red"></button></ng-template>                                
+        </div>
+         <p id="head" class="center"> {{r.name}}</p>          
+          <div id="body" style="font-size: 80%">          
+            <p>Updated by: {{r.updatedBy}} </p> 
+            <p>Last Update: {{r.lastUpdate}} </p>
+            <p> Update Reason: {{r.updateReason}}</p>
+          </div>  
+      </div>
   </div>
-  <button (click)="goBack()">go back</button>
-</div>
+
+
+ 
+
+
+    
+  
+
